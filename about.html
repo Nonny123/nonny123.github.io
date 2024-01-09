@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>About - Cubenmax Systems</title>
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="Shortcut Icon" type="image/x-icon" href="assets/images/favicon.ico"/>
+  <style>
+    #small-dialog {
+      background: white;
+      padding: 5px;
+      max-width: 750px;
+      margin: 40px auto;
+      position: relative;
+    }
+
+    div#small-dialog iframe {
+      width: 100%;
+      height: 400px;
+      display: block;
+    }
+    .my-mfp-zoom-in .zoom-anim-dialog {
+      opacity: 0;
+
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+
+      -webkit-transform: scale(0.8);
+      -moz-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      -o-transform: scale(0.8);
+      transform: scale(0.8);
+    }
+
+    .my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
+      opacity: 1;
+
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1);
+    }
+
+    /* animate out */
+    .my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
+      -webkit-transform: scale(0.8);
+      -moz-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      -o-transform: scale(0.8);
+      transform: scale(0.8);
+
+      opacity: 0;
+    }
+
+    /* Dark overlay, start state */
+    .my-mfp-zoom-in.mfp-bg {
+      opacity: 0;
+      -webkit-transition: opacity 0.3s ease-out;
+      -moz-transition: opacity 0.3s ease-out;
+      -o-transition: opacity 0.3s ease-out;
+      transition: opacity 0.3s ease-out;
+    }
+
+    /* animate in */
+    .my-mfp-zoom-in.mfp-ready.mfp-bg {
+      opacity: 0.8;
+    }
+
+    /* animate out */
+    .my-mfp-zoom-in.mfp-removing.mfp-bg {
+      opacity: 0;
+    }
+
+    .my-mfp-slide-bottom .zoom-anim-dialog {
+      opacity: 0;
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
+
+      -webkit-transform: translateY(-20px) perspective(600px) rotateX(10deg);
+      -moz-transform: translateY(-20px) perspective(600px) rotateX(10deg);
+      -ms-transform: translateY(-20px) perspective(600px) rotateX(10deg);
+      -o-transform: translateY(-20px) perspective(600px) rotateX(10deg);
+      transform: translateY(-20px) perspective(600px) rotateX(10deg);
+
+    }
+
+    /* animate in */
+    .my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
+      opacity: 1;
+      -webkit-transform: translateY(0) perspective(600px) rotateX(0);
+      -moz-transform: translateY(0) perspective(600px) rotateX(0);
+      -ms-transform: translateY(0) perspective(600px) rotateX(0);
+      -o-transform: translateY(0) perspective(600px) rotateX(0);
+      transform: translateY(0) perspective(600px) rotateX(0);
+    }
+
+    /* animate out */
+    .my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
+      opacity: 0;
+
+      -webkit-transform: translateY(-10px) perspective(600px) rotateX(10deg);
+      -moz-transform: translateY(-10px) perspective(600px) rotateX(10deg);
+      -ms-transform: translateY(-10px) perspective(600px) rotateX(10deg);
+      -o-transform: translateY(-10px) perspective(600px) rotateX(10deg);
+      transform: translateY(-10px) perspective(600px) rotateX(10deg);
+    }
+
+    /* Dark overlay, start state */
+    .my-mfp-slide-bottom.mfp-bg {
+      opacity: 0;
+
+      -webkit-transition: opacity 0.3s ease-out;
+      -moz-transition: opacity 0.3s ease-out;
+      -o-transition: opacity 0.3s ease-out;
+      transition: opacity 0.3s ease-out;
+    }
+
+    /* animate in */
+    .my-mfp-slide-bottom.mfp-ready.mfp-bg {
+      opacity: 0.8;
+    }
+
+    /* animate out */
+    .my-mfp-slide-bottom.mfp-removing.mfp-bg {
+      opacity: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="site-bootstrap-header fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light p-2">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="logo"><span>Cubenmax Systems</span></a> 
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+		   <li class="nav-item">
+            <a class="nav-link" href="services.html">Our Services</a>
+          </li>
+          
+	  <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+          <div class="form-inline">
+            <a href="contact.html" class="btn btn-primary btn-theme">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <section class="site-about1">
+    <div class="new-block top-bottom">
+      <div class="container">
+        <div class="middle-section">
+          <div class="section-width">
+            <h2>Authenticity is our foundation, and we pledge to consistently deliver our utmost.</h2>
+          </div>
+          <div class="link-list-menu">
+            <p>We hold the conviction that our excellence speaks for itself. It's not mere words but a result of unwavering dedication, commitment, and focus. With a shared culture and ethos, we believe every individual can attain their personal best and conquer any challenge.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <section class="site-about3 py-5">
+    <div class="container py-lg-3">
+      <h3 class="text-center mb-3 timeline-title">Our story from April 2016 to today</h3>
+      <ul class="timeline">
+        <li>
+          <div class="direction-r">
+            <div class="flag-wrapper">
+              <span class="flag">Founded April 2016</span>
+            </div>
+            <div class="desc">In April 2016, our journey began with a humble start in a shared office space, where a small team shared a vision for something greater. Born out of a collective passion for innovation, our company embarked on a mission to build something extraordinary. In those shared office walls, ideas flourished, collaborations blossomed, and the foundation was laid for the exceptional brand we've become today.</div>
+          </div>
+        </li>
+
+        <li>
+          <div class="direction-l">
+            <div class="flag-wrapper">
+              <span class="flag">Our first customer</span>
+            </div>
+            <div class="desc">Our inaugural customer, a visionary entrepreneur, took a chance on us in the early days of our journey, becoming the catalyst for our growth. Their trust and partnership fueled our determination to deliver unparalleled service. Their success became our success, setting the tone for the lasting relationships we continue to build with each valued client.</div>
+          </div>
+        </li>
+
+        <li>
+          <div class="direction-r">
+            <div class="flag-wrapper">
+              <span class="flag">First major project</span>
+            </div>
+            <div class="desc">Classgist was our first major project and it marked a significant milestone in our company's evolution. Undertaken with enthusiasm and a commitment to excellence, this endeavor pushed the boundaries of innovation and showcased our capabilities. Successfully navigating the complexities of the project not only solidified our expertise but also laid the groundwork for the ambitious ventures that followed.</div>
+          </div>
+        </li>
+        <li>
+          <div class="direction-l">
+            <div class="flag-wrapper">
+              <span class="flag">Hiring and outsourcing strategy</span>
+            </div>
+            <div class="desc">Our hiring and outsourcing strategy is meticulously designed to assemble a dynamic and skilled team that aligns with our company's vision and values. We prioritize attracting top-tier talent, fostering a collaborative work environment, and providing continuous learning opportunities to ensure our team stays at the forefront of industry trends. Additionally, we strategically leverage outsourcing partnerships to augment our capabilities, tapping into specialized expertise and resources that enhance our overall efficiency and innovation. This dual approach enables us to maintain a nimble and adept workforce, ready to tackle diverse challenges and drive sustained success.</div>
+          </div>
+        </li>
+        <li>
+          <div class="direction-r">
+            <div class="flag-wrapper">
+              <span class="flag">Current activities - Crafting Cutting-Edge Solutions</span>
+            </div>
+            <div class="desc">We are at the forefront of technological advancements, leveraging the latest tools and frameworks to develop solutions that redefine industry standards. Our commitment to innovation is embedded in our development process, ensuring that every project benefits from state-of-the-art technologies, fostering efficiency, scalability, and unparalleled performance.
+
+              From embracing cloud-native architectures to harnessing the power of machine learning and artificial intelligence, our development teams are adept at integrating the latest technological trends into our solutions. This strategic approach not only future-proofs our products but also empowers our clients with transformative, forward-looking solutions that stand out in today's dynamic digital landscape.
+              
+              By consistently staying abreast of emerging technologies, we ensure that our clients not only meet their current objectives but also position themselves for success in the ever-evolving tech landscape. </div>
+          </div>
+        </li>
+        <li>
+          <div class="direction-l">
+            <div class="flag-wrapper">
+              <span class="flag">Today</span>
+            </div>
+            <div class="desc">Our vision is to evolve as a trailblazer in the industry, pioneering groundbreaking solutions that anticipate and meet the ever-changing needs of our clients.
+
+              Looking ahead, we are committed to expanding our global footprint, fostering strategic partnerships, and enhancing our service portfolio to cater to emerging market demands. Embracing sustainability, inclusivity, and cutting-edge technology will remain pivotal in our endeavors, as we aspire to contribute meaningfully to both local and global communities.
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+  <section class="site-about4">
+    <div class="contact1-bg py-5">
+      <div class="container py-lg-3">
+        <div class="contact-main row align-items-center">
+          <div class="col-md-6">
+            <div class="column">
+              <h3 class="header mb-4">Our doors are open</h3>
+              <p class="head-main mb-3">We are ready to offer unwavering support and personalized solutions tailored to your unique needs. Our commitment is rooted in ensuring your success, and we're dedicated to being a reliable partner throughout your journey.</p>
+            </div>
+            <div class="column2">
+              <h6 class="contact-address"> A.P.T Imj Block 16 Shop 740 Trade Fair Complex, Badagry Express Way, Lagos</h6>
+            </div>
+          </div>
+          <div class="col-md-6 map mt-md-0 mt-4">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15856.713209172733!2d3.091407!3d6.499098!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b78a47328fd01%3A0x9da90198ea5b3b07!2sClassgist!5e0!3m2!1sen!2sng!4v1702156873219!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- about-block6 -->
+  <section class="site-about6 py-5">
+    <div class="container py-md-3 text-center">
+      <div class="heading text-center mx-auto">
+        <h3 class="head">Ready to get started? </h3>
+      </div>
+      <div class="buttons mt-4">
+        <a href="contact.html" class="btn btn-outline-primary mr-2 btn-demo">Book a Demo</a>
+        
+      </div>
+    </div>
+  </section>
+  <!-- / about-block6 -->
+  <!-- footer-28 block -->
+  <section class="site-market-footer">
+    <footer class="footer-28">
+      <div class="footer-bg-layer">
+        <div class="container py-lg-3">
+          <div class="row footer-top-28">
+            <div class="col-md-6 footer-list-28 mt-5">
+              <h6 class="footer-title-28">Get in touch</h6>
+                  <ul>
+                    <li>
+                      <p><strong>Address</strong> : A.P.T Imj Block 16 Shop 740 Trade Fair Complex, Badagry Express Way, Lagos</p>
+                    </li>
+                    <li>
+                      <p><strong>Phone</strong> : <a href="tel:+2348173572741">+2348173572741</a></p>
+                    </li>
+                    <li>
+                      <p><strong>Email</strong> : <a href="mailto:contact@cubenmaxsystems.com">contact@cubenmaxsystems.com</a></p>
+                    </li>
+                  </ul>
+
+                </div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-md-6 footer-list-28 mt-5">
+                      <h6 class="footer-title-28">Site Information</h6>
+                      <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="whychoose.html">Why Choose Us</a></li>
+                        <li><a href="affiliates.html">Affiliates</a></li>                       
+                      </ul>
+                    </div>
+                    <div class="col-md-6 footer-list-28 mt-5">
+                      <h6 class="footer-title-28">Legal</h6>
+                      <ul>
+                        <li><a href="cookies.html">Cookies</a></li>
+                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                        <li><a href="termsservice.html">Terms of Service</a></li>
+                      </ul>
+                    </div>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="midd-footer-28 align-center py-lg-4 py-3 mt-5">
+              <div class="container">
+                <p class="copy-footer-28 text-center"> &copy; 2024 Cubenmax Systems. All Rights Reserved.</p>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+      &#10548;
+    </button>
+    <script>
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction()
+      };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("movetop").style.display = "block";
+        } else {
+          document.getElementById("movetop").style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+    <!-- /move top -->
+  </section>
+  <!-- //footer-28 block -->
+
+  <!-- jQuery, Bootstrap JS -->
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+
+  <!-- Template JavaScript -->
+
+  <script src="assets/js/owl.carousel.js"></script>
+
+  <!-- script for owlcarousel -->
+  <script>
+    $(document).ready(function () {
+      $('.owl-one').owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: true,
+        responsiveClass: true,
+        autoplay: false,
+        autoplayTimeout: 5000,
+        autoplaySpeed: 1000,
+        autoplayHoverPause: false,
+        responsive: {
+          0: {
+            items: 1,
+            nav: false
+          },
+          480: {
+            items: 1,
+            nav: false
+          },
+          667: {
+            items: 1,
+            nav: true
+          },
+          1000: {
+            items: 1,
+            nav: true
+          }
+        }
+      })
+    })
+  </script>
+  <!-- //script for owlcarousel -->
+
+  <!-- disable body scroll which navbar is in active -->
+  <script>
+    $(function () {
+      $('.navbar-toggler').click(function () {
+        $('body').toggleClass('noscroll');
+      })
+    });
+  </script>
+  <!-- disable body scroll which navbar is in active -->
+
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.popup-with-zoom-anim').magnificPopup({
+        type: 'inline',
+
+        fixedContentPos: false,
+        fixedBgPos: true,
+
+        overflowY: 'auto',
+
+        closeBtnInside: true,
+        preloader: false,
+
+        midClick: true,
+        removalDelay: 300,
+        mainClass: 'my-mfp-zoom-in'
+      });
+
+      $('.popup-with-move-anim').magnificPopup({
+        type: 'inline',
+
+        fixedContentPos: false,
+        fixedBgPos: true,
+
+        overflowY: 'auto',
+
+        closeBtnInside: true,
+        preloader: false,
+
+        midClick: true,
+        removalDelay: 300,
+        mainClass: 'my-mfp-slide-bottom'
+      });
+    });
+  </script>
+
+</body>
+
+</html>
+

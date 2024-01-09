@@ -1,0 +1,103 @@
+<script type="text/javascript"
+       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+
+<script type="text/javascript">
+  (function () {
+     emailjs.init("_2l0GPJKS4_XOPLKT");
+  })();
+</script>
+
+<script>
+  var templateParams = {
+    from_name: 'Sender',
+    message: 'Test Message',
+    to_name: 'Cubenmax Team'
+  };
+
+  emailjs.send('service_5oyyj3n', 'template_2yk8l3d', templateParams)
+    .then(function (response) {
+      console.log('SUCCESS!', response.status, response.text);
+    }, function (error) {
+      console.log('FAILED...', error);
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <script type="text/javascript"
+             src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+          </script>
+
+
+          <script type="text/javascript">
+             (function () {
+              emailjs.init("_2l0GPJKS4_XOPLKT");
+             })();
+           </script>
+
+           <script>
+  
+             $("#contactForm").on("submit", function(event) {
+              event.preventDefault();
+
+               var firstName = $("#txtFirstName").val();
+               var lastName = $("#txtLastName").val();
+               var fullName = firstName + " " + lastName;
+
+               var email = $("#txtEmail").val();
+               var phone = $("#txtPhone").val();
+               var subject = $("#txtSubject").val();
+               var message = $("#txtMessage").val();
+
+               var result = email + '\n' + phone + '\n' + subject + '\n' + message;
+
+
+               var templateParams = {
+                 from_name: fullName,
+                 message: result,
+                 to_name: 'Cubenmax Team'
+               };
+
+               emailjs.send('service_5oyyj3n', 'template_2yk8l3d', templateParams)
+                 .then(function (response) {
+                   console.log('SUCCESS!', response.status, response.text);
+                 }, function (error) {
+                   console.log('FAILED...', error);
+               });
+                toastr.success('Submission was successful! We will contact you', 'Success');
+
+
+               $("#txtFirstName").val('');
+               $("#txtLastName").val('');
+               $("#txtEmail").val('');
+               $("#txtPhone").val('');
+               $("#txtSubject").val('');
+               $("#txtMessage").val('');
+
+               
+             });
+           </script>
+
+

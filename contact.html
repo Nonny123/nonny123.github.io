@@ -88,10 +88,87 @@
               <span class="fa fa-map-marker"></span>
             </div>
             <div class="cont-right">
-              <p>18 Unity Close Orile Coker Lagos</p>
+              <p>18 Unity Close</p>
             </div>
           </div>
         </div>
+
+
+		  
+<button id="sendButton">Send WhatsApp Message</button>
+
+  <script>
+    document.getElementById("sendButton").addEventListener("click", async () => {
+
+      const url =
+        "https://graph.facebook.com/v25.0/107952805257853/messages";
+
+      const accessToken = "YOUR_ACCESS_TOKEN";
+
+      const data = {
+        messaging_product: "whatsapp",
+        to: "23481013067",
+        type: "template",
+        template: {
+          name: "jaspers_market_order_confirmation_v1",
+          language: {
+            code: "en_US"
+          },
+          components: [
+            {
+              type: "body",
+              parameters: [
+                {
+                  type: "text",
+                  text: "John Doe"
+                },
+                {
+                  type: "text",
+                  text: "123456"
+                },
+                {
+                  type: "text",
+                  text: "Oct 1, 2026"
+                }
+              ]
+            }
+          ]
+        }
+      };
+
+      try {
+        const response = await fetch(url, {
+          method: "POST",
+          headers: {
+            "Authorization": `Bearer ${accessToken}`,
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        console.log("Response:", result);
+
+        if (response.ok) {
+          alert("WhatsApp message sent successfully!");
+        } else {
+          alert("Failed to send message: " + JSON.stringify(result));
+        }
+
+      } catch (error) {
+        console.error("Error:", error);
+        alert("An error occurred while sending the message.");
+      }
+
+    });
+  </script>
+
+
+
+		  
+
+		  
         <div class="map-content-9 col-md-7 mt-5 mt-md-0">
           <form id="contactForm" method="post">
             <div class="form-group row">
@@ -159,7 +236,7 @@
                   <h6 class="footer-title-28">Get in touch</h6>
                   <ul>
                     <li>
-                       <p><strong>Address</strong> : 18 Unity Close Orile Coker Lagos</p>
+                       <p><strong>Address</strong> : 18 Unity Close </p>
                     </li>
                     <li>
                       <p><strong>Phone</strong> : <a href="tel:+2348173572741">+2348173572741</a></p>
